@@ -1,6 +1,5 @@
 package fr.architrademe.org.architect.domain;
 
-import java.util.List;
 import java.util.Objects;
 
 // VO
@@ -19,8 +18,8 @@ public final class Experiences {
     }
 
     public static Experiences of(String companyName,
-                                       String missionType,
-                                       int missionDuration) {
+                                 String missionType,
+                                 int missionDuration) {
         return new Experiences(companyName, missionType, missionDuration);
     }
 

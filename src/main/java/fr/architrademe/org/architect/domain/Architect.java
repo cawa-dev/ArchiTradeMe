@@ -42,11 +42,17 @@ public final class Architect {
         return architectID;
     }
 
-    public String firstname() { return firstname; }
+    public String firstname() {
+        return firstname;
+    }
 
-    public String lastname() { return lastname; }
+    public String lastname() {
+        return lastname;
+    }
 
-    public List<Experiences> experiences() { return experiences; }
+    public List<Experiences> experiences() {
+        return experiences;
+    }
 
     public AverageDailyRates averageDailyRates() {
         return averageDailyRates;

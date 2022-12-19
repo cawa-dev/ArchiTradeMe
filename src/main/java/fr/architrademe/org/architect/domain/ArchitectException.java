@@ -1,9 +1,13 @@
 package fr.architrademe.org.architect.domain;
 
 // Tactical DDD Exception
-public class ArchitectException extends RuntimeException{
+public class ArchitectException extends RuntimeException {
 
-    public ArchitectException(String message) {
-        super(message);
+    private ArchitectException() {
+        throw new AssertionError();
+    }
+
+    public static ArchitectException create() {
+        throw new ArchitectException();
     }
 }
