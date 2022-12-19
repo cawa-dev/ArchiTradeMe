@@ -6,7 +6,7 @@ import java.util.Objects;
 public final class Architect {
 
     // Entity VO ID
-    private ArchitectID architectID;
+    private final ArchitectID architectID;
     private String firstname;
     private String lastname;
     // Expériences VO
@@ -40,6 +40,10 @@ public final class Architect {
     public ArchitectID id() {
         return architectID;
     }
+
+    public String firstname() { return firstname; }
+
+    public String lastname() { return lastname; }
 
     public Experiences experiences() {
         return experiences;
