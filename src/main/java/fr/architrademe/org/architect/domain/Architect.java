@@ -1,5 +1,6 @@
 package fr.architrademe.org.architect.domain;
 
+import java.util.List;
 import java.util.Objects;
 
 // Entity
@@ -10,7 +11,7 @@ public final class Architect {
     private String firstname;
     private String lastname;
     // Expériences VO
-    private Experiences experiences;
+    private List<Experiences> experiences;
     // TJM VO
     private AverageDailyRates averageDailyRates;
     // Disponibilités VO
@@ -21,7 +22,7 @@ public final class Architect {
     public Architect(ArchitectID architectID,
                      String firstname,
                      String lastname,
-                     Experiences experiences,
+                     List<Experiences> experiences,
                      AverageDailyRates averageDailyRates,
                      Availablity availablity,
                      Modality modality
@@ -45,9 +46,7 @@ public final class Architect {
 
     public String lastname() { return lastname; }
 
-    public Experiences experiences() {
-        return experiences;
-    }
+    public List<Experiences> experiences() { return experiences; }
 
     public AverageDailyRates averageDailyRates() {
         return averageDailyRates;
@@ -65,15 +64,12 @@ public final class Architect {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Architect architect = (Architect) o;
-
         return Objects.equals(architectID, architect.architectID);
     }
 
     @Override
     public int hashCode() {
-        return architectID != null ? architectID.hashCode() : 0;
+        return Objects.hash(architectID);
     }
-
 }
