@@ -1,12 +1,13 @@
 package fr.architrademe.org.architect.adapter.out;
 
 import fr.architrademe.org.architect.application.port.out.CreateArchitectPort;
+import fr.architrademe.org.architect.application.port.out.UpdateArchitectPort;
 import fr.architrademe.org.architect.domain.Architect;
 import fr.architrademe.org.architect.domain.ArchitectId;
 
 import java.util.UUID;
 
-public class ArchitectPersistenceAdapter implements CreateArchitectPort {
+public class ArchitectPersistenceAdapter implements CreateArchitectPort, UpdateArchitectPort {
 
     private final ArchitectEntityRepository architectEntityRepository;
 
@@ -29,6 +30,20 @@ public class ArchitectPersistenceAdapter implements CreateArchitectPort {
                 architect.averageDailyRates(),
                 architect.availablity(),
                 architect.modality());
+        architectEntityRepository.save(architectEntity);
+    }
+
+    @Override
+    public void update(Architect architect) {
+        var architectEntity = new ArchitectEntity(
+                architect.id().value(),
+                architect.firstname(),
+                architect.lastname(),
+                architect.experiences(),
+                architect.averageDailyRates(),
+                architect.availablity(),
+                architect.modality()
+        );
         architectEntityRepository.save(architectEntity);
     }
 }
