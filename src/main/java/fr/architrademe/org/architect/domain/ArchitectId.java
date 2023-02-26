@@ -3,18 +3,16 @@ package fr.architrademe.org.architect.domain;
 import java.util.Objects;
 import java.util.UUID;
 
-// VO ID for Architect Entity
-public final class ArchitectID {
+public final class ArchitectId {
 
     private final UUID value;
 
-    private ArchitectID(UUID value) {
+    private ArchitectId(UUID value) {
         this.value = value;
     }
 
-    // static factory method to instantiate our Object
-    public static ArchitectID of(UUID value) {
-        return new ArchitectID(value);
+    public static ArchitectId of(UUID value) {
+        return new ArchitectId(value);
     }
 
     public String value() {
@@ -25,7 +23,7 @@ public final class ArchitectID {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ArchitectID that = (ArchitectID) o;
+        ArchitectId that = (ArchitectId) o;
         return Objects.equals(value, that.value);
     }
 

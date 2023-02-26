@@ -3,29 +3,23 @@ package fr.architrademe.org.architect.domain;
 import java.util.List;
 import java.util.Objects;
 
-// Entity
 public final class Architect {
 
-    // Entity VO ID
-    private final ArchitectID architectID;
+    private final ArchitectId architectID;
     private String firstname;
     private String lastname;
-    // Expériences VO
     private List<Experiences> experiences;
-    // TJM VO
-    private AverageDailyRates averageDailyRates;
-    // Disponibilités VO
-    private Availablity availablity;
-    // Modalité VO
-    private Modality modality;
+    private String averageDailyRates;
+    private String availablity;
+    private String modality;
 
-    public Architect(ArchitectID architectID,
+    public Architect(ArchitectId architectID,
                      String firstname,
                      String lastname,
                      List<Experiences> experiences,
-                     AverageDailyRates averageDailyRates,
-                     Availablity availablity,
-                     Modality modality
+                     String averageDailyRates,
+                     String availablity,
+                     String modality
     ) {
         this.architectID = architectID;
         this.firstname = firstname;
@@ -38,7 +32,7 @@ public final class Architect {
 
     // TODO: Implements Business Method
 
-    public ArchitectID id() {
+    public ArchitectId id() {
         return architectID;
     }
 
@@ -54,15 +48,15 @@ public final class Architect {
         return experiences;
     }
 
-    public AverageDailyRates averageDailyRates() {
+    public String averageDailyRates() {
         return averageDailyRates;
     }
 
-    public Availablity availablity() {
+    public String availablity() {
         return availablity;
     }
 
-    public Modality modality() {
+    public String modality() {
         return modality;
     }
 
@@ -77,5 +71,18 @@ public final class Architect {
     @Override
     public int hashCode() {
         return Objects.hash(architectID);
+    }
+
+    @Override
+    public String toString() {
+        return "Architect{" +
+                "architectID=" + architectID +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", experiences=" + experiences +
+                ", averageDailyRates='" + averageDailyRates + '\'' +
+                ", availablity='" + availablity + '\'' +
+                ", modality='" + modality + '\'' +
+                '}';
     }
 }
