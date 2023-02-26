@@ -1,7 +1,10 @@
 package fr.architrademe.org.architect.adapter.out;
 
 
-import javax.persistence.*;
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.List;
 
 @Entity

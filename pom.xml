@@ -37,7 +37,6 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>${spring-boot.version}</version>
         </dependency>
-
         <!-- MySQL Connector/J -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -45,7 +44,6 @@
             <version>8.0.31</version>
             <scope>runtime</scope>
         </dependency>
-
         <!-- JAXB dependencies -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -68,7 +66,6 @@
             <version>${activation.version}</version>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <!-- Maven Compiler Plugin -->
@@ -81,7 +78,6 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
             <!-- Spring Boot Maven Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -90,5 +86,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

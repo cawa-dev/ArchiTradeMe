@@ -10,9 +10,4 @@ public class KernelConfiguration {
     public CommandBus commandBus() {
         return BusFactory.defaultCommandBus();
     }
-
-    @Bean
-    public QueryBus queryBus() {
-        return BusFactory.defaultQueryBus();
-    }
 }

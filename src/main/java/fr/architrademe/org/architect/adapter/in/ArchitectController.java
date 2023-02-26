@@ -2,18 +2,15 @@ package fr.architrademe.org.architect.adapter.in;
 
 import fr.architrademe.org.architect.application.port.in.CreateArchitectCommand;
 import kernel.CommandBus;
-import kernel.QueryBus;
 
 import java.util.List;
 
 public final class ArchitectController {
 
     private final CommandBus commandBus;
-    private final QueryBus queryBus;
 
-    public ArchitectController(CommandBus commandBus, QueryBus queryBus) {
+    public ArchitectController(CommandBus commandBus) {
         this.commandBus = commandBus;
-        this.queryBus = queryBus;
     }
 
     public String create(
