@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public final class Architect {
 
-    private final ArchitectId architectID;
+    private final ArchitectId architectId;
     private String firstname;
     private String lastname;
     private List<String> experiences;
@@ -13,15 +13,16 @@ public final class Architect {
     private String availablity;
     private String modality;
 
-    public Architect(ArchitectId architectID,
-                     String firstname,
-                     String lastname,
-                     List<String> experiences,
-                     String averageDailyRates,
-                     String availablity,
-                     String modality
+    public Architect(
+            ArchitectId architectId,
+            String firstname,
+            String lastname,
+            List<String> experiences,
+            String averageDailyRates,
+            String availablity,
+            String modality
     ) {
-        this.architectID = architectID;
+        this.architectId = architectId;
         this.firstname = firstname;
         this.lastname = lastname;
         this.experiences = experiences;
@@ -30,10 +31,10 @@ public final class Architect {
         this.modality = modality;
     }
 
-    // TODO: Implements Business Method
+    //TODO: Implements Business Method
 
     public ArchitectId id() {
-        return architectID;
+        return architectId;
     }
 
     public String firstname() {
@@ -65,18 +66,18 @@ public final class Architect {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Architect architect = (Architect) o;
-        return Objects.equals(architectID, architect.architectID);
+        return Objects.equals(architectId, architect.architectId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(architectID);
+        return Objects.hash(architectId);
     }
 
     @Override
     public String toString() {
         return "Architect{" +
-                "architectID=" + architectID +
+                "architectID=" + architectId +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
                 ", experiences=" + experiences +

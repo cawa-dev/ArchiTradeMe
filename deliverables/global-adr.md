@@ -5,7 +5,8 @@
 ## Contexte
 
 > Nous construisons une nouvelle application qui nécessite une architecture flexible, évolutive et maintenable. Nous
-> avons décidé d'utiliser le modèle d'architecture hexagonale, également appelé ports et adaptateurs, qui isole le cœur de
+> avons décidé d'utiliser le modèle d'architecture hexagonale, également appelé ports et adaptateurs, qui isole le cœur
+> de
 > l'application de l'infrastructure et des systèmes externes. Notre équipe de développement maîtrise Java et nous avons
 > décidé de l'utiliser pour implémenter l'application.
 
@@ -15,7 +16,7 @@
 
 ## Raisonnement
 
-> There are several benefits of using the Hexagonal Architecture pattern with Java for our application:
+> L'utilisation du modèle Hexagonal Architecture avec Java pour notre application présente plusieurs avantages.
 
 #### Séparation des responsabilités :
 
@@ -48,13 +49,13 @@
 
 > L'implémentation du modèle d'architecture hexagonale avec Java nécessite une bonne compréhension du modèle et de ses
 > détails d'implémentation. Cela nécessite également des efforts supplémentaires pour définir des interfaces claires et
-> des préoccupations distinctes.
+> des responsabilités distinctes.
 >> Nous devrons choisir et configurer les bibliothèques et outils appropriés pour implémenter le modèle d'architecture
 > > hexagonale avec Java. Nous devrons également former notre équipe de développement sur le modèle et sa mise en œuvre.
 
 ## Conclusion
 
 > Après un examen attentif des avantages et des implications, nous avons décidé d'implémenter l'application en utilisant
-> le modèle d'architecture hexagonale avec Java. Cette décision nous fournit une architecture flexible, évolutive et
+> le modèle d'architecture hexagonale avec Java et le framework Spring. Cette décision nous fournit une architecture flexible, évolutive et
 > maintenable qui peut facilement s'adapter aux changements des exigences et des systèmes externes. Cette décision a été
 > approuvée par les parties prenantes impliquées dans le projet.

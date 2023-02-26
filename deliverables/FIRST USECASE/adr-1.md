@@ -5,7 +5,8 @@
 ## Contexte
 
 > Pour l'inscription de notre consultant architect nous avons décider d'utiliser notre architecture hexagonal déjà en
-> vigueur et de l'incrémenter d'un noyau (kernel) qui nous permet de facilité l'interaction avec le controller qui dirige
+> vigueur et de l'incrémenter d'un noyau (kernel) qui nous permet de facilité l'interaction avec le controller qui
+> dirige
 > l'application.
 
 ### Decision
@@ -24,5 +25,5 @@
 
 ## Conclusion
 
-> Après implémentation de ce cas d'usage on peux voir tout les avantages que le noyau (kernel) apporte au niveau de
+> L'implémentation de ce kernel à été accepté par tous et après implémentation de ce cas d'usage on peux voir tout les avantages que le noyau (kernel) apporte au niveau de
 > l'application.
