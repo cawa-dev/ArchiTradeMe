@@ -11,3 +11,5 @@
 <p align='right'>Created by "MOUCHON Sacha" & "MARLEIX Noé" for our 4TH year in Master of Software Architecture</p>
 
 ---
+
+![sonarqube-screenshot.png](deliverables/sonarqube-screenshot.png)
