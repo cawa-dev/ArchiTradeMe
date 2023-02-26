@@ -31,7 +31,7 @@ public final class ArchitectId {
     public int hashCode() {
         return Objects.hash(value);
     }
-    
+
     @Override
     public String toString() {
         return "ArchitectID{" +

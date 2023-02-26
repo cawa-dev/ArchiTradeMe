@@ -8,7 +8,7 @@ public final class Architect {
     private final ArchitectId architectID;
     private String firstname;
     private String lastname;
-    private List<Experiences> experiences;
+    private List<String> experiences;
     private String averageDailyRates;
     private String availablity;
     private String modality;
@@ -16,7 +16,7 @@ public final class Architect {
     public Architect(ArchitectId architectID,
                      String firstname,
                      String lastname,
-                     List<Experiences> experiences,
+                     List<String> experiences,
                      String averageDailyRates,
                      String availablity,
                      String modality
@@ -44,7 +44,7 @@ public final class Architect {
         return lastname;
     }
 
-    public List<Experiences> experiences() {
+    public List<String> experiences() {
         return experiences;
     }
 
