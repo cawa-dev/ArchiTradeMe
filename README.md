@@ -12,4 +12,9 @@
 
 ---
 
+## To run
+> Run the database on docker by using `docker-compose up -d`.
+>> and after you can hit in the termine `mvn spring-boot:run`.
+---
+
 ![sonarqube-screenshot.png](deliverables/sonarqube-screenshot.png)
