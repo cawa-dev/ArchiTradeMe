@@ -1,13 +1,16 @@
 package fr.architrademe.org.architect.adapter.out;
 
 import fr.architrademe.org.architect.application.port.out.CreateArchitectPort;
+import fr.architrademe.org.architect.application.port.out.LoadArchitectPort;
 import fr.architrademe.org.architect.application.port.out.UpdateArchitectPort;
 import fr.architrademe.org.architect.domain.Architect;
+import fr.architrademe.org.architect.domain.ArchitectException;
 import fr.architrademe.org.architect.domain.ArchitectId;
 
+import java.util.Optional;
 import java.util.UUID;
 
-public class ArchitectPersistenceAdapter implements CreateArchitectPort, UpdateArchitectPort {
+public class ArchitectPersistenceAdapter implements CreateArchitectPort, UpdateArchitectPort, LoadArchitectPort {
 
     private final ArchitectEntityRepository architectEntityRepository;
 
@@ -45,5 +48,27 @@ public class ArchitectPersistenceAdapter implements CreateArchitectPort, UpdateA
                 architect.modality()
         );
         architectEntityRepository.save(architectEntity);
+    }
+
+    @Override
+    public Architect load(ArchitectId architectId) {
+        Optional<ArchitectEntity> optionalArchitectEntity = architectEntityRepository.findById(architectId.value());
+        if (optionalArchitectEntity.isPresent()) {
+            var architectEntity = optionalArchitectEntity.get();
+            ArchitectId architectIdFromEntity = ArchitectId
+                    .of(UUID.fromString(architectEntity.getArchitectID()));
+
+            return new Architect(
+                    architectIdFromEntity,
+                    architectEntity.getFirstname(),
+                    architectEntity.getLastname(),
+                    architectEntity.getExperiences(),
+                    architectEntity.getAverageDailyRates(),
+                    architectEntity.getAvailablity(),
+                    architectEntity.getModality()
+            );
+        }
+
+        throw ArchitectException.notFoundArchitectId(architectId);
     }
 }

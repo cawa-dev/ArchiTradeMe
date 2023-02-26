@@ -56,6 +56,7 @@
 ## Conclusion
 
 > Après un examen attentif des avantages et des implications, nous avons décidé d'implémenter l'application en utilisant
-> le modèle d'architecture hexagonale avec Java et le framework Spring. Cette décision nous fournit une architecture flexible, évolutive et
+> le modèle d'architecture hexagonale avec Java et le framework Spring. Cette décision nous fournit une architecture
+> flexible, évolutive et
 > maintenable qui peut facilement s'adapter aux changements des exigences et des systèmes externes. Cette décision a été
 > approuvée par les parties prenantes impliquées dans le projet.

@@ -1,8 +1,11 @@
 package fr.architrademe.org.architect.adapter.in;
 
 import fr.architrademe.org.architect.application.port.in.CreateArchitectCommand;
+import fr.architrademe.org.architect.application.port.in.LoadArchitectQuery;
 import fr.architrademe.org.architect.application.port.in.UpdateArchitectCommand;
+import fr.architrademe.org.architect.domain.Architect;
 import kernel.CommandBus;
+import kernel.QueryBus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -16,9 +19,12 @@ public class ArchitectWebController {
 
     private final CommandBus commandBus;
 
+    private final QueryBus queryBus;
+
     @Autowired
-    private ArchitectWebController(CommandBus commandBus) {
+    private ArchitectWebController(CommandBus commandBus, QueryBus queryBus) {
         this.commandBus = commandBus;
+        this.queryBus = queryBus;
     }
 
     @PostMapping(
@@ -58,5 +64,23 @@ public class ArchitectWebController {
                 updateArchitectRequest.modality
         ));
         return new UpdateArchitectResponse(architectId);
+    }
+
+    @GetMapping(
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public FindArchitectResponse findById(
+            @RequestParam String architectId
+    ) {
+        var architect = (Architect) queryBus.post(new LoadArchitectQuery(architectId));
+        return new FindArchitectResponse(
+                architect.id().value(),
+                architect.firstname(),
+                architect.lastname(),
+                architect.experiences(),
+                architect.averageDailyRates(),
+                architect.availablity(),
+                architect.modality()
+        );
     }
 }

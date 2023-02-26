@@ -1,8 +1,6 @@
 package fr.architrademe.org.architect.application;
 
-import kernel.ApplicationException;
-
-public final class ArchitectApplicationException extends ApplicationException {
+public final class ArchitectApplicationException extends RuntimeException {
 
     private ArchitectApplicationException(String message) {
         super(message);

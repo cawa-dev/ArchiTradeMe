@@ -25,5 +25,6 @@
 
 ## Conclusion
 
-> L'implémentation de ce kernel à été accepté par tous et après implémentation de ce cas d'usage on peux voir tout les avantages que le noyau (kernel) apporte au niveau de
+> L'implémentation de ce kernel à été accepté par tous et après implémentation de ce cas d'usage on peux voir tout les
+> avantages que le noyau (kernel) apporte au niveau de
 > l'application.
